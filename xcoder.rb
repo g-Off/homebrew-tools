@@ -10,4 +10,10 @@ class Xcoder < Formula
   def install
     system "make", "install", "PREFIX=#{prefix}"
   end
+  
+  bottle do
+    root_url "https://github.com/g-Off/xcoder/releases/download/0.3.0"
+    cellar :any_skip_relocation
+    sha256 "1e7e9bb597b7210dd46c4e6d123c64237968451e31d62f8a9543eda3700a5a46" => :mojave
+  end
 end
